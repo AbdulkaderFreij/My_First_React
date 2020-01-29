@@ -1,0 +1,237 @@
+html{
+  background-color: lightblue;
+}
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: bounceIn 0.6s;
+  transform: rotate(0deg) scale(1) translateZ(0);
+  transition: all 0.4s cubic-bezier(.8, 1.8, .75, .75);
+  cursor: pointer;
+  width: 120px;
+  padding-left: 20px;
+}
+
+
+.App-logo:hover {
+  transform: rotate(3deg) scale(1.1);
+}
+
+
+.App-header {
+  animation: colorchange 10s infinite;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  position: relative;
+}
+
+
+
+@keyframes colorchange {
+  0% {
+    background: orangered;
+  }
+
+  25% {
+    background: purple;
+  }
+
+  50% {
+    background: blue;
+  }
+
+  75% {
+    background: green;
+  }
+
+  100% {
+    background: orangered;
+  }
+}
+
+.navbar ul {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+}
+
+.navbar ul li {
+  padding-right: 20px;
+
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+  opacity: 0.75;
+}
+
+.navbar ul li a:hover {
+  opacity: 1;
+  transition: all 0.5s;
+  text-decoration: underline;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(20deg);
+  }
+}
+
+footer {
+  animation: colorchange 10s infinite;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  color: white;
+}
+
+
+.wrapper {
+
+  background: #f3f4f4;
+  min-height: 100%;
+  overflow: hidden;
+  text-align: center;
+}
+
+.x1 {
+  left: 5%;
+  -webkit-transform: scale(0.9);
+  -moz-transform: scale(0.9);
+  transform: scale(0.9);
+  opacity: 0.6;
+  -webkit-animation: moveclouds 15s linear infinite, sideWays 4s ease-in-out infinite alternate;
+  -moz-animation: moveclouds 15s linear infinite, sideWays 4s ease-in-out infinite alternate;
+}
+
+.x2 {
+  left: 25%;
+  -webkit-transform: scale(0.6);
+  -moz-transform: scale(0.6);
+  transform: scale(0.6);
+  opacity: 0.9;
+  -webkit-animation: moveclouds 25s linear infinite, sideWays 5s ease-in-out infinite alternate;
+  -moz-animation: moveclouds 25s linear infinite, sideWays 5s ease-in-out infinite alternate;
+}
+
+.x3 {
+  left: 55%;
+  -webkit-transform: scale(0.8);
+  -moz-transform: scale(0.8);
+  transform: scale(0.8);
+  opacity: 0.8;
+  -webkit-animation: moveclouds 20s linear infinite, sideWays 4s ease-in-out infinite alternate;
+  -moz-animation: moveclouds 20s linear infinite, sideWays 4s ease-in-out infinite alternate;
+}
+
+.x4 {
+  left: 72%;
+  -webkit-transform: scale(0.75);
+  -moz-transform: scale(0.75);
+  transform: scale(0.75);
+  opacity: 0.9;
+  -webkit-animation: moveclouds 18s linear infinite, sideWays 2s ease-in-out infinite alternate;
+  -moz-animation: moveclouds 18s linear infinite, sideWays 0zs ease-in-out infinite alternate;
+}
+
+
+@-webkit-keyframes moveclouds {
+  0% {
+    top: 500px;
+  }
+
+  100% {
+    top: -500px;
+  }
+}
+
+@keyframes moveclouds {
+  0% {
+    top: 500px;
+  }
+
+  100% {
+    top: -500px;
+  }
+}
+
+@-webkit-keyframes sideWays {
+  0% {
+    margin-left: 0px;
+  }
+
+  100% {
+    margin-left: 50px;
+  }
+}
+
+@keyframes sideWays {
+  0% {
+    margin-left: 0px;
+  }
+
+  100% {
+    margin-left: 50px;
+  }
+}
+
+
+.heart {
+  position: absolute;
+}
+
+.heart:before,
+.heart:after {
+  position: absolute;
+  content: "";
+  left: 18px;
+  top: 0;
+  width: 18px;
+  height: 30px;
+  background: #CC2022;
+  -moz-border-radius: 20px 50% 0 0;
+  border-radius: 30px 30px 0 0;
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  -webkit-transform-origin: 0 100%;
+  -ms-transform-origin: 0 100%;
+  transform-origin: 0 100%;
+}
+
+.heart:after {
+  left: 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  -webkit-transform-origin: 100% 100%;
+  -ms-transform-origin: 100% 100%;
+  transform-origin: 100% 100%;
+}
+
+
+@media only screen and (max-width: 800px),
+(min-device-width: 768px) and (max-device-width: 1024px) {
+   .navbar ul {
+    display: flex;
+    flex-direction: column;
+  }
+}

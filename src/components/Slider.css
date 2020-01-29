@@ -1,0 +1,60 @@
+.content h1 {
+    color: green;
+}
+
+.mission h1 {
+    color: green;
+}
+
+.content p {
+    color: orangered;
+    line-height: 30px;
+    text-align: left;
+    
+}
+
+.mission p {
+    color: orangered;
+    line-height: 30px;
+    border-right: 2px solid lightblue;
+    text-align: left;
+    padding-left: 20px;
+}
+
+.content {
+    padding-right: 20px;
+}
+
+.mission {
+    padding-right: 30px;
+    padding-left: 10px;
+}
+
+.intro {
+    display: flex;
+    flex-direction: row;
+}
+
+.image1 img {
+    width: 400px;
+    height: 220px;
+    padding-right: 20px;
+    padding-top: 20px;
+}
+
+@media only screen and (max-width: 800px),
+(min-device-width: 768px) and (max-device-width: 1024px) {
+   .intro {
+    display: block;
+  }
+  .image1 img{
+    width:320px;
+    height:250px;
+    padding-right: 20px;
+  }
+
+  footer{
+    display: block;
+    text-align: center;
+  }
+}
